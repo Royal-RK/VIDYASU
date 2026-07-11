@@ -118,6 +118,28 @@ span {
   color: #000;
   fill: #000;
 }
+h2 {
+  font-family: var(--font-Urbanist);
+  font-weight: 500;
+  line-height: calc(72 / 60);
+}
+h2 > span {
+  position: relative;
+  padding-bottom: 3px;
+  color: var(--primary-color);
+}
+h2 > span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  right: 0;
+  background-image: url("../assets/abt-cnt-after.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 13px;
+}
 /*======================= Top-header ===================*/
 .top-header {
   background-color: var(--primary-color);
@@ -563,8 +585,11 @@ span {
 }
 /*============ About ============*/
 .abt-sec {
-  padding: 129px 0;
+  padding: 129px 0 0;
   background: var(--abt-sec-color);
+}
+.abt-sec .abt-row {
+  /* margin-bottom: 80px; */
 }
 .abt-sec .abt-img {
   max-width: 629px;
@@ -574,30 +599,8 @@ span {
   height: 100%;
   object-fit: cover;
 }
-.abt-sec .abt-cnt {
-  /* max-width: 525px; */
-}
 .abt-cnt h2 {
-  font-family: var(--font-Urbanist);
-  font-weight: 500;
   margin-bottom: 27px;
-}
-.abt-sec .abt-cnt h2 > span {
-  position: relative;
-  padding-bottom: 3px;
-  color: var(--primary-color);
-}
-.abt-cnt h2 > span::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 40px;
-  right: 0;
-  background-image: url("../assets/abt-cnt-after.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 175px;
-  height: 13px;
 }
 .abt-cnt > p {
   margin-left: 30px;
@@ -645,19 +648,17 @@ span {
   line-height: calc(27 / 17);
   color: var(--abt-p-text-color);
 }
-/*======= Program =======*/
-.prgrm-sec {
-  padding-bottom: 78px;
-}
-.prgrm-sec .prgrm-tp-box {
-  padding: 50px 100px;
+.abt-sec .abt-btm-box {
+  padding: 40px 100px;
   background: var(--primary-color);
   border-radius: 20px;
+  position: relative;
+  top: 145px;
 }
-.prgrm-sec .prgrm-tp-card {
+.abt-sec .abt-btm-card {
   padding: 16px 4px;
 }
-.prgrm-sec .prgrm-tp-card .number {
+.abt-sec .abt-btm-card .number {
   margin-bottom: 10px;
   font-size: 100px;
   font-family: var(--font-Crimson-Pro);
@@ -666,20 +667,91 @@ span {
   color: var(--text-color);
   line-height: calc(80 / 100);
 }
-.prgrm-sec .prgrm-tp-card .people {
+.abt-sec .abt-btm-card .people {
   color: var(--text-color);
   font-family: var(--font-Urbanist);
   font-size: 20px;
 }
-.prgrm-sec .prgrm-tp-card {
-  margin: 0 auto;
-}
-.prgrm-sec .prgrm-tp-card.card-2,
-.prgrm-sec .prgrm-tp-card.card-3 {
+.abt-sec .abt-btm-card {
   text-align: center;
 }
-.prgrm-sec .prgrm-tp-card.card-4 {
-  text-align: end !important;
+.abt-sec .abt-btm-card {
+  position: relative;
+}
+/* .abt-sec .abt-btm-card:first-child::after,
+.abt-sec .abt-btm-card:nth-child(2)::after,
+.abt-sec .abt-btm-card:nth-child(3)::after */
+.abt-sec .abt-btm-card.card-1::after,
+.abt-sec .abt-btm-card.card-2::after,
+.abt-sec .abt-btm-card.card-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  right: -10%;
+  background: rgba(255, 255, 255, 30%);
+}
+/*======= Program =======*/
+.prgrm-sec {
+  padding-top: 208px;
+}
+.prgrm-sec .prgrm-cnt {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.prgrm-cnt p {
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  line-height: calc(27 / 17);
+  color: var(--abt-p-text-color);
+}
+.prgrm-sec .crse-card {
+  max-width: 378px;
+  width: 100%;
+  padding: 10px 13px 5px;
+  background: var(--abt-sec-color);
+  border-radius: 15px;
+}
+.prgrm-sec .crse-card .card-img {
+  max-width: 352px;
+  margin-bottom: 20px;
+}
+.prgrm-sec .crse-card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.crse-card .card-title {
+  max-width: 316px;
+  margin-left: 18px;
+  font-size: 22px;
+  font-family: var(--font-Urbanist);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.crse-card p {
+  max-width: 316px;
+  margin: 0 18px 30px;
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  line-height: calc(27 / 17);
+  color: var(--abt-p-text-color);
+}
+.crse-card .stud {
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  line-height: calc(27 / 17);
+  color: var(--abt-p-text-color);
+  margin: 0 18px 8px;
+  display: block;
+}
+.crse-card .sesn~ {
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  line-height: calc(27 / 17);
+  color: var(--abt-p-text-color);
+  margin: 0 18px 30px;
 }
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {
@@ -772,6 +844,9 @@ span {
     margin: 0 auto 30px;
   }
   /*--------- About  ---------*/
+  .abt-sec {
+    padding-bottom: 30px;
+  }
   .abt-sec .abt-img {
     margin-bottom: 40px !important;
   }
@@ -787,6 +862,23 @@ span {
   .abt-sec .abt-cnt .abt-trust .students {
     display: flex;
     justify-content: center;
+  }
+  .abt-sec .abt-btm-box {
+    margin: 0 20px;
+    padding: 25px 50px;
+    top: 30px;
+  }
+  .abt-sec .abt-btm-card {
+    padding: 16px 4px;
+  }
+  .abt-sec .abt-btm-card .number {
+    margin-bottom: 10px;
+    font-size: 100px;
+    font-family: var(--font-Crimson-Pro);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: calc(80 / 100);
   }
 }
 @media screen and (max-width: 768px) {
@@ -830,6 +922,15 @@ span {
     height: 100%;
     object-fit: cover;
   }
+  /*---------- About ----------*/
+  .abt-sec .abt-btm-box {
+    padding: 20px 30px;
+    margin: 0 80px;
+  }
+  .abt-sec .abt-btm-card .number {
+    margin-bottom: 10px;
+    font-size: 80px;
+  }
 }
 @media screen and (max-width: 405px) {
   .tp-hedr-cnt ul li:last-child::before {
@@ -843,5 +944,13 @@ span {
   }
   .bnr-right-img {
     top: 230px;
+  }
+  /*---------- About ----------*/
+  .abt-sec .abt-btm-box {
+    margin: 0 30px;
+  }
+  .abt-sec .abt-btm-card .number {
+    margin-bottom: 10px;
+    font-size: 80px;
   }
 }

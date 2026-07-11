@@ -9,6 +9,8 @@
   <!-- Bootstrap css CDN link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
   <!-- Css link -->
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -513,34 +515,110 @@
             </div>
           </div>
         </div>
+        <div class="row abt-btm-box">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="abt-btm-card card-1">
+              <div class="number">2k</div>
+              <div class="people">Students</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="abt-btm-card card-2">
+              <div class="number">30</div>
+              <div class="people">Professors</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="abt-btm-card card-3">
+              <div class="number">6k</div>
+              <div class="people">Programs</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="abt-btm-card card-4">
+              <div class="number">2k</div>
+              <div class="people">Research</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Program Section -->
     <section class="prgrm-sec">
       <div class="container">
-        <div class="row prgrm-tp-box">
-          <div class="col-6 col-lg-3">
-            <div class="prgrm-tp-card card-1">
-              <div class="number">2k</div>
-              <div class="people">Students</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="prgrm-tp-card card-1">
-              <div class="number">30</div>
-              <div class="people">Professors</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="prgrm-tp-card card-1">
-              <div class="number">6k</div>
-              <div class="people">Programs</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="prgrm-tp-card card-1">
-              <div class="number">2k</div>
-              <div class="people">Research</div>
+        <div class="prgrm-cnt">
+          <h2 class="title-2"><span>Academic</span> Programs</h2>
+          <p>Focusing on high education with the best quality.</p>
+        </div>
+        <div class="prgrm-card-slider">
+          <div class="swiper prgrm-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="crse-card card-1">
+                  <div class="card-img">
+                    <img src="./assets/prgrm-card-1.png" alt="">
+                  </div>
+                  <div class="card-title">UI/UX Design Essentials</div>
+                  <p>Create engaging user experiences with Figma & prototyping.</p>
+                  <span class="stud">242 Students</span>
+                  <span class="sesn">18 Sessions</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="crse-card card-2">
+                  <div class="card-img">
+                    <img src="./assets/prgrm-card-2.png" alt="">
+                  </div>
+                  <div class="card-title">Web Development Mastery</div>
+                  <p>Build modern websites with HTML, CSS & JavaScript.</p>
+                  <span class="stud">268 Students</span>
+                  <span class="sesn">20 Sessions</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="crse-card card-3">
+                  <div class="card-img">
+                    <img src="./assets/prgrm-card-3.png" alt="">
+                  </div>
+                  <div class="card-title">Data Science & Machine Learning</div>
+                  <p>Learn Python, AI, and predictive models</p>
+                  <span class="stud">346 Students</span>
+                  <span class="sesn">10 Sessions</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="crse-card card-4">
+                  <div class="card-img">
+                    <img src="./assets/prgrm-card-4.png" alt="">
+                  </div>
+                  <div class="card-title">Digital Marketing Pro</div>
+                  <p>Master SEO, social media, and online advertising.</p>
+                  <span class="stud">252 Students</span>
+                  <span class="sesn">14 Sessions</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="crse-card card-5">
+                  <div class="card-img">
+                    <img src="./assets/prgrm-card-5.png" alt="">
+                  </div>
+                  <div class="card-title">Graphic Design Creative</div>
+                  <p>Design stunning visuals with Photoshop & Illustrator.</p>
+                  <span class="stud">310 Students</span>
+                  <span class="sesn">19 Sessions</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="crse-card card-6">
+                  <div class="card-img">
+                    <img src="./assets/prgrm-card-6.png" alt="">
+                  </div>
+                  <div class="card-title">Cybersecurity Fundamentals</div>
+                  <p>Learn to secure data, systems, and networks.</p>
+                  <span class="stud">356 Students</span>
+                  <span class="sesn">26 Sessions</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -552,6 +630,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
   <!-- Custom js link -->
   <script src="./js/script.js" defer></script>
 </body>
