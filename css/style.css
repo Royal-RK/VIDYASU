@@ -746,12 +746,12 @@ h2 > span::after {
   margin: 0 18px 8px;
   display: block;
 }
-.crse-card .sesn~ {
+.crse-card .sesn {
   font-size: 17px;
   font-family: var(--font-Urbanist);
   line-height: calc(27 / 17);
   color: var(--abt-p-text-color);
-  margin: 0 18px 30px;
+  margin: 0 18px 30px !important;
 }
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {
