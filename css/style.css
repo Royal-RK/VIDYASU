@@ -12,7 +12,7 @@
   --star-color: #ffce5b;
   --nrml-text-color: #dbd8d8;
   --nav-bg-color: #979797;
-  --abt-sec-color: #f6f4ee;
+  --abt-sec-color: #fcf7e7;
   --abt-card-bg: #1fad96;
   --abt-text-color: #ab0c2f;
   --abt-p-text-color: #898989;
@@ -694,7 +694,7 @@ h2 > span::after {
 }
 /*======= Program =======*/
 .prgrm-sec {
-  padding-top: 208px;
+  padding: 208px 0 80px;
 }
 .prgrm-sec .prgrm-cnt {
   text-align: center;
@@ -706,21 +706,58 @@ h2 > span::after {
   line-height: calc(27 / 17);
   color: var(--abt-p-text-color);
 }
+.prgrm-sec .prgrm-card-slider {
+  margin-bottom: 20px;
+}
+.prgrm-sec .prgrm-swiper {
+  padding-bottom: 50px;
+}
+.prgrm-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+.prgrm-sec .swiper-pagination {
+  position: relative;
+  bottom: -40px;
+}
+.prgrm-sec .swiper-button-prev,
+.prgrm-sec .swiper-button-next {
+  color: var(--text-color);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.prgrm-sec .swiper-button-prev svg path,
+.prgrm-sec .swiper-button-next svg path {
+  stroke: var(--primary-color);
+}
+.prgrm-sec .swiper-pagination-bullet {
+  background: #828282;
+}
+.prgrm-sec .swiper-pagination-bullet-active {
+  background: var(--abt-text-color);
+}
 .prgrm-sec .crse-card {
-  max-width: 378px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 10px 13px 5px;
   background: var(--abt-sec-color);
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .prgrm-sec .crse-card .card-img {
-  max-width: 352px;
-  margin-bottom: 20px;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  transition: 0.5s linear;
+  border-radius: 15px;
 }
 .prgrm-sec .crse-card .card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s linear;
+  border-radius: 15px;
 }
 .crse-card .card-title {
   max-width: 316px;
@@ -737,6 +774,7 @@ h2 > span::after {
   font-family: var(--font-Urbanist);
   line-height: calc(27 / 17);
   color: var(--abt-p-text-color);
+  flex-grow: 1;
 }
 .crse-card .stud {
   font-size: 17px;
@@ -751,7 +789,82 @@ h2 > span::after {
   font-family: var(--font-Urbanist);
   line-height: calc(27 / 17);
   color: var(--abt-p-text-color);
-  margin: 0 18px 30px !important;
+  margin: 0 18px;
+}
+.crse-card:hover .card-img img {
+  transform: rotate(10deg) scale(1.3);
+}
+.crse-card .apply-btn {
+  width: 100%;
+  display: block;
+  background: var(--text-color);
+  text-align: center;
+  border-radius: 4px;
+  padding: 9px 0;
+  font-family: var(--font-Urbanist);
+  font-weight: 600;
+  color: #000;
+  transition: 0.5s linear;
+  overflow: hidden;
+  position: relative;
+  margin-top: auto;
+}
+.crse-card .apply-btn span {
+  color: #000;
+  font-family: var(--font-Outfit);
+  font-weight: 500;
+  z-index: 1 !important;
+  position: relative;
+  transition: 0.5s linear;
+}
+.crse-card .apply-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--primary-color);
+  width: 10px;
+  transform: scale(0);
+  transition: 0.5s linear;
+}
+.crse-card .apply-btn:hover::after {
+  transform: scale(80);
+}
+.prgrm-sec .prgrm-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.prgrm-btn p {
+  margin-bottom: 0;
+  font-size: 17px;
+  line-height: calc(27 / 17);
+  font-family: var(--font-Outfit);
+}
+.prgrm-btn .view-btn {
+  position: relative;
+}
+.prgrm-btn .view-btn span {
+  font-family: var(--font-Urbanist);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--abt-text-color);
+  line-height: calc(27 / 18);
+}
+.prgrm-btn .view-btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0%;
+  bottom: -2px;
+  height: 1.5px;
+  background: var(--abt-text-color);
+  transition: 0.3s linear;
+}
+.prgrm-btn .view-btn:hover::after {
+  width: 100%;
 }
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {
@@ -763,6 +876,7 @@ h2 > span::after {
   .nav-btn {
     gap: 8px;
   }
+  /*--------- Program ---------*/
 }
 @media screen and (max-width: 992px) {
   body {
@@ -880,6 +994,7 @@ h2 > span::after {
     color: var(--text-color);
     line-height: calc(80 / 100);
   }
+  /*--------- Program ---------*/
 }
 @media screen and (max-width: 768px) {
   /*--------- Banner ---------*/
@@ -895,6 +1010,14 @@ h2 > span::after {
     height: 100%;
     object-fit: cover;
   }
+  /*--------- Program ---------*/
+}
+@media screen and(max-width:600px) {
+  /* .swiper-button-next svg,
+  .swiper-button-prev svg {
+    display: block !important;
+    z-index: 99;
+  } */
 }
 @media screen and (max-width: 576px) {
   .title-1 {
