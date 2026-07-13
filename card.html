@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card {
+        position: relative;
+    }
+
+    .card::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 40px;
+        background: #356c56;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border-radius: 40px 40px 0 0;
+    }
+</style>
+
+<body>
+    <div class="card" style="background-color: red; overflow: hidden; width: 490px;">
+
+        <!-- Content Section -->
+        <div class="card-content">
+            <p class="card-tag">Video & Tips</p>
+            <h2 class="card-title">Those Other College Expenses You Aren't Thinking About</h2>
+
+            <!-- Meta Info Section -->
+            <div class="card-meta">
+                <span class="meta-item author">
+                    <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Owen Christ
+                </span>
+                <span class="meta-item date">
+                    <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Jan 25, 2021
+                </span>
+            </div>
+        </div>
+
+        <!-- Floating Bottom Button -->
+        <button class="card-btn" aria-label="Read more">
+            <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+        </button>
+    </div>
+</body>
+
+</html>

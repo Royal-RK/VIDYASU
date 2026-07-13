@@ -873,6 +873,7 @@ h2 > span::after {
 }
 /*============ Event ============*/
 .evnt-sec {
+  background: #f6f4ee;
   padding: 80px 0;
 }
 .evnt-sec .evnt-title {
@@ -902,14 +903,14 @@ h2 > span::after {
 .evnt-sec .evnt-title h2 > span::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: -8px;
+  bottom: -5px;
+  left: -200px;
   right: 0;
   background-image: url("../assets/event-title.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 152px;
-  height: 8px;
+  width: 160px;
+  height: 13px;
 }
 .evnt-sec .evnt-list .evnt {
   display: flex;
@@ -975,7 +976,190 @@ h2 > span::after {
   padding: 80px;
   background: url("../assets/testimonial-bg.png") no-repeat center/cover;
 }
-.testi-sec .box {}
+.testi-sec .testi-cnt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testi-cnt .video {
+  text-align: center;
+}
+.testi-cnt .video .video-btn {
+  margin-bottom: 25px;
+}
+.testi-sec .testi-cnt .video span {
+  font-size: 34px;
+  font-family: var(--font-Outfit);
+  font-weight: 500;
+  color: var(--text-color);
+}
+.testi-cnt .testi-card {
+  padding: 65px 55px 27px;
+  background: #e6e7ee;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  z-index: 0;
+}
+.testi-card::after {
+  content: "❞";
+  position: absolute;
+  top: -10px;
+  right: 40px;
+  font-size: 180px;
+  color: rgb(197, 194, 194);
+}
+.testi-card .card-heading {
+  margin-bottom: 50px;
+}
+.testi-card .sub-head {
+  font-family: var(--font-Outfit);
+  font-weight: 600;
+  color: var(--abt-text-color);
+  text-transform: uppercase;
+}
+.testi-card .heading {
+  font-size: 40px;
+  font-family: var(--font-Outfit);
+  font-weight: 600;
+}
+.testi-card .prfil-img {
+  max-width: 60px;
+  margin-bottom: 25px;
+}
+.testi-card .card-btm {
+  /* max-width: 582px; */
+}
+.testi-card .prfil-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testi-card .card-btm p {
+  font-size: 20px;
+  font-family: var(--font-Urbanist);
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: var(--abt-p-text-color);
+  line-height: calc(25 / 20);
+  margin-bottom: 20px;
+}
+.testi-card .dtils {
+  margin-bottom: 30px;
+}
+.testi-card .dtils .nme {
+  font-size: 22px;
+  font-family: var(--font-Urbanist);
+  font-weight: 500;
+  line-height: calc(20 / 22);
+}
+.testi-card .dtils .domain {
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+}
+.testi-card .testi-card-btns {
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+}
+.testi-card .testi-card-btns .prv-btn,
+.testi-card .testi-card-btns .nxt-btn {
+  transition: 0.3s linear;
+  border-radius: 50%;
+}
+.testi-card .testi-card-btns .prv-btn:hover,
+.testi-card .testi-card-btns .nxt-btn:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+/*=========== News ===========*/
+.nws-sec {
+  padding: 55px 0;
+  background: #f6f4ee;
+}
+.nws-cnt {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.nws-cnt .sub-head {
+  font-size: 18px;
+  font-family: var(--font-Crimson-Pro);
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--abt-text-color);
+}
+.nws-sec .nws-cnt h2 > span {
+  color: var(--abt-text-color);
+}
+.nws-sec .nws-cnt h2 > span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -204px;
+  right: 0;
+  background-image: url("../assets/event-title.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 13px;
+}
+.nws-sec .nws-card {
+  padding: 10px 15px 50px;
+  background: var(--text-color);
+  border-radius: 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  position: relative;
+  /* overflow: hidden;   */
+  z-index: 0;
+}
+/* .nws-card::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74px;
+  height: 64px;
+  background: #f6f4ee;
+  border-radius: 50%;
+} */
+.nws-sec .nws-card .card-img {
+  max-width: 100%;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  transition: 0.5s linear;
+  border-radius: 15px;
+}
+.nws-sec .nws-card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s linear;
+  border-radius: 15px;
+}
+.nws-sec .nws-card:hover .card-img img {
+  transform: rotate(10deg) scale(1.25);
+}
+.nws-sec .nws-card .card-title {
+  font-size: 34px;
+  font-family: var(--font-Outfit);
+  font-weight: bold;
+}
+.nws-sec .nws-card.card-1 .card-title {
+  max-width: 431px;
+}
+.nws-sec .nws-card.card-2 .card-title {
+  max-width: 538px;
+}
+.nws-sec .nws-card .card-btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 85px;
+  z-index: 1;
+}
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {
   /*--------- Navbar ---------*/
@@ -1119,6 +1303,28 @@ h2 > span::after {
   .evnt-sec .evnt-title .title-2 {
     margin-left: 0;
   }
+  /*--------- Testimonial ---------*/
+  .testi-sec {
+    padding: 50px 0;
+  }
+  .testi-sec .testi-cnt {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  /*--------- News ---------*/
+  .nws-sec .nws-cnt h2 > span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -184px;
+    right: 0;
+    background-image: url("../assets/event-title.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 13px;
+  }
 }
 @media screen and (max-width: 768px) {
   /*--------- Banner ---------*/
@@ -1139,13 +1345,51 @@ h2 > span::after {
   .evnt-sec .evnt-title {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
   .evnt-title .title-2 {
     text-align: center;
   }
   .evnt-sec .evnt-list .evnt .evnt-detail {
     gap: 30px;
+  }
+  .evnt-sec .evnt-title h2 > span::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    right: 0;
+    background-image: url("../assets/event-title.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 142px;
+    height: 12px;
+  }
+  /*--------- Testimonial ---------*/
+  .testi-cnt .testi-card {
+    padding: 45px 40px 27px;
+  }
+  .testi-card .card-heading {
+    margin-bottom: 30px;
+  }
+  .testi-card .heading {
+    font-size: 30px;
+  }
+  .testi-card .dtils {
+    margin-bottom: 20px;
+  }
+  /*--------- News ---------*/
+  .nws-sec .nws-cnt h2 > span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -174px;
+    right: 0;
+    background-image: url("../assets/event-title.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 13px;
   }
 }
 @media screen and(max-width:600px) {
@@ -1217,6 +1461,40 @@ h2 > span::after {
   .evnt .evnt-detail .name-time .name {
     font-size: 20px;
   }
+  .evnt-sec .evnt-title h2 > span::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    right: 0;
+    background-image: url("../assets/event-title.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 12px;
+  }
+  /*--------- Testimonial ---------*/
+  .testi-card::after {
+    content: "❞";
+    position: absolute;
+    top: -35px;
+    right: 10px;
+    font-size: 160px;
+    color: rgb(197, 194, 194);
+  }
+  /*--------- News ---------*/
+  .nws-sec .nws-cnt h2 > span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 6px;
+    right: 0;
+    background-image: url("../assets/event-title.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 13px;
+  }
 }
 @media screen and (max-width: 405px) {
   .tp-hedr-cnt ul li:last-child::before {
@@ -1238,5 +1516,42 @@ h2 > span::after {
   .abt-sec .abt-btm-card .number {
     margin-bottom: 10px;
     font-size: 80px;
+  }
+  /*--------- Testimonial ---------*/
+  .testi-cnt .testi-card {
+    padding: 30px 30px 27px;
+  }
+  .testi-card .card-heading {
+    margin-bottom: 20px;
+  }
+  .testi-card .sub-head {
+    font-size: 15px;
+  }
+  .testi-card .heading {
+    font-size: 25px;
+  }
+  .testi-card .card-btm p {
+    font-size: 16px;
+    font-family: var(--font-Urbanist);
+    font-weight: 500;
+    letter-spacing: -0.7px;
+    color: var(--abt-p-text-color);
+    line-height: calc(25 / 20);
+    margin-bottom: 20px;
+  }
+  .testi-card .dtils {
+    margin-bottom: 10px;
+  }
+  .testi-card .testi-card-btns {
+    justify-content: center;
+  }
+  /*--------- Testimonial ---------*/
+  .testi-card::after {
+    content: "❞";
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    font-size: 140px;
+    color: rgb(197, 194, 194);
   }
 }
