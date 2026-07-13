@@ -78,7 +78,7 @@ span {
   padding: 13px 30px;
   background-color: var(--primary-color);
   border-radius: 8px;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
   overflow: hidden;
   position: relative;
 }
@@ -112,6 +112,9 @@ span {
 }
 .primary-btn:hover::after {
   transform: scale(80);
+}
+.primary-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .primary-btn:hover span,
 .primary-btn:hover svg path {
@@ -582,6 +585,7 @@ h2 > span::after {
 }
 .card:hover {
   transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 /*============ About ============*/
 .abt-sec {
@@ -824,7 +828,7 @@ h2 > span::after {
   top: 0;
   bottom: 0;
   background: var(--primary-color);
-  width: 10px;
+  width: 20px;
   transform: scale(0);
   transition: 0.5s linear;
 }
@@ -836,6 +840,7 @@ h2 > span::after {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
 }
 .prgrm-btn p {
   margin-bottom: 0;
@@ -866,6 +871,111 @@ h2 > span::after {
 .prgrm-btn .view-btn:hover::after {
   width: 100%;
 }
+/*============ Event ============*/
+.evnt-sec {
+  padding: 80px 0;
+}
+.evnt-sec .evnt-title {
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  position: relative;
+}
+.evnt-title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  background: rgba(132, 132, 132, 30%);
+}
+.evnt-sec .evnt-title .title-2 {
+  max-width: 475px;
+  margin-bottom: 0;
+  margin-left: 160px;
+}
+.evnt-sec .evnt-title h2 > span {
+  color: var(--abt-text-color);
+}
+.evnt-sec .evnt-title h2 > span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  right: 0;
+  background-image: url("../assets/event-title.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 152px;
+  height: 8px;
+}
+.evnt-sec .evnt-list .evnt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+.evnt-sec .evnt-list .evnt::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: rgba(132, 132, 132, 30%);
+}
+.evnt-sec .evnt-list .evnt .evnt-detail {
+  display: flex;
+  align-items: center;
+  gap: 119px;
+}
+.evnt .evnt-detail .year .date {
+  font-size: 50px;
+  font-family: var(--font-Crimson-Pro);
+  font-weight: 500;
+  font-style: italic;
+  line-height: calc(40 / 50);
+  color: var(--abt-text-color);
+}
+.evnt.evnt-1 .evnt-detail .year .date {
+  color: black;
+}
+.evnt .evnt-detail .year .month {
+  font-size: 16px;
+  font-family: var(--font-Urbanist);
+}
+.evnt .evnt-detail .name-time .name {
+  font-size: 24px;
+  font-family: var(--font-Outfit);
+}
+.evnt-sec .evnt .name-time .time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.evnt .name-time .time .time-icon,
+.evnt .name-time .time .location {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.evnt .name-time .time .time-icon span,
+.evnt .name-time .time .location span {
+  margin-top: 5px;
+  font-family: var(--font-Urbanist);
+  font-size: 16px;
+  color: var(--abt-p-text-color);
+}
+/*=========== Testimonial ===========*/
+.testi-sec {
+  padding: 80px;
+  background: url("../assets/testimonial-bg.png") no-repeat center/cover;
+}
+.testi-sec .box {}
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {
   /*--------- Navbar ---------*/
@@ -887,6 +997,9 @@ h2 > span::after {
   }
   .title-1 {
     font-size: 70px;
+  }
+  .title-2 {
+    font-size: 50px;
   }
   /* Top header */
   .top-header,
@@ -928,6 +1041,7 @@ h2 > span::after {
   }
   /*--------- Banner ---------*/
   .bnr-sec {
+    padding-bottom: 60px;
     position: relative;
     z-index: 1;
   }
@@ -959,7 +1073,7 @@ h2 > span::after {
   }
   /*--------- About  ---------*/
   .abt-sec {
-    padding-bottom: 30px;
+    padding: 60px 0 30px;
   }
   .abt-sec .abt-img {
     margin-bottom: 40px !important;
@@ -995,6 +1109,16 @@ h2 > span::after {
     line-height: calc(80 / 100);
   }
   /*--------- Program ---------*/
+  .prgrm-sec {
+    padding: 70px 0 30px;
+  }
+  /*--------- Event ---------*/
+  .evnt-sec {
+    padding: 50px 0;
+  }
+  .evnt-sec .evnt-title .title-2 {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   /*--------- Banner ---------*/
@@ -1011,8 +1135,25 @@ h2 > span::after {
     object-fit: cover;
   }
   /*--------- Program ---------*/
+  /*--------- Event ---------*/
+  .evnt-sec .evnt-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .evnt-title .title-2 {
+    text-align: center;
+  }
+  .evnt-sec .evnt-list .evnt .evnt-detail {
+    gap: 30px;
+  }
 }
 @media screen and(max-width:600px) {
+  /*--------- Program ---------*/
+  /* .prgrm-swiper-slider {
+    padding:0 40px !important;
+    margin: 0 70px !important;
+  } */
   /* .swiper-button-next svg,
   .swiper-button-prev svg {
     display: block !important;
@@ -1021,7 +1162,13 @@ h2 > span::after {
 }
 @media screen and (max-width: 576px) {
   .title-1 {
-    font-size: 30px;
+    font-size: 45px;
+  }
+  .title-2 {
+    font-size: 45px;
+  }
+  h2 > span::after {
+    width: 130px;
   }
   /*--------- Navbar ---------*/
   .text-icon {
@@ -1031,6 +1178,9 @@ h2 > span::after {
     justify-content: center;
   }
   /*--------- Banner ---------*/
+  .bnr-cnt .sub-title {
+    font-size: 35px;
+  }
   .bnr-right-img {
     position: absolute;
     right: 0;
@@ -1045,6 +1195,10 @@ h2 > span::after {
     height: 100%;
     object-fit: cover;
   }
+  /*---------- Study ----------*/
+  .stdy-sec {
+    padding-bottom: 50px;
+  }
   /*---------- About ----------*/
   .abt-sec .abt-btm-box {
     padding: 20px 30px;
@@ -1053,6 +1207,15 @@ h2 > span::after {
   .abt-sec .abt-btm-card .number {
     margin-bottom: 10px;
     font-size: 80px;
+  }
+  /*--------- Event ---------*/
+  .evnt-sec .evnt-list .evnt .evnt-detail {
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+  }
+  .evnt .evnt-detail .name-time .name {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 405px) {
