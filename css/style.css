@@ -49,6 +49,12 @@ header {
   margin: 0 auto;
   width: 100%;
 }
+.xl-continer {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 a {
   display: inline-block;
   text-decoration: none;
@@ -537,6 +543,9 @@ h2 > span::after {
 .stdy-cards .card .card-btn {
   position: relative;
 }
+.stdy-sec .card .arow-btn {
+  transition: 0.3s linear;
+}
 .stdy-cards .card .card-cnt {
   margin: 0 auto;
   text-align: center;
@@ -583,9 +592,13 @@ h2 > span::after {
 .stdy-btn .best-btn:hover::after {
   width: 100%;
 }
-.card:hover {
+.stdy-sec .card:hover {
+  padding-bottom: 20px;
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.stdy-sec .card:hover .arow-btn {
+  transform: rotate(90deg);
 }
 /*============ About ============*/
 .abt-sec {
@@ -658,6 +671,11 @@ h2 > span::after {
   border-radius: 20px;
   position: relative;
   top: 145px;
+  transition: 0.3s linear;
+}
+.abt-sec .abt-btm-box:hover {
+  transform: scale(0.9) translateY(-30px);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .abt-sec .abt-btm-card {
   padding: 16px 4px;
@@ -1000,6 +1018,7 @@ h2 > span::after {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
   z-index: 0;
+  transition: 0.3s linear;
 }
 .testi-card::after {
   content: "❞";
@@ -1026,6 +1045,7 @@ h2 > span::after {
 .testi-card .prfil-img {
   max-width: 60px;
   margin-bottom: 25px;
+  /* border-radius: 50%; */
 }
 .testi-card .card-btm {
   /* max-width: 582px; */
@@ -1034,6 +1054,13 @@ h2 > span::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s linear;
+  border-radius: 48%;
+}
+.testi-card img:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .testi-card .card-btm p {
   font-size: 20px;
@@ -1073,6 +1100,9 @@ h2 > span::after {
     rgba(0, 0, 0, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+.testi-card:hover {
+  transform: scale(0.9) translate(-20px, -30px);
+}
 /*=========== News ===========*/
 .nws-sec {
   padding: 55px 0;
@@ -1106,7 +1136,7 @@ h2 > span::after {
   height: 13px;
 }
 .nws-sec .nws-card {
-  padding: 10px 15px 50px;
+  padding: 10px 15px 20px;
   background: var(--text-color);
   border-radius: 15px;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
@@ -1142,10 +1172,20 @@ h2 > span::after {
 .nws-sec .nws-card:hover .card-img img {
   transform: rotate(10deg) scale(1.25);
 }
+.nws-sec .nws-card .card-cnt {
+  text-align: center;
+}
+.nws-sec .nws-card .card-cnt .sub-title {
+  font-family: var(--font-Outfit);
+  font-weight: 600;
+  color: var(--abt-text-color);
+  margin-bottom: 8px;
+}
 .nws-sec .nws-card .card-title {
   font-size: 34px;
   font-family: var(--font-Outfit);
   font-weight: bold;
+  margin: 0 auto 20px;
 }
 .nws-sec .nws-card.card-1 .card-title {
   max-width: 431px;
@@ -1153,12 +1193,55 @@ h2 > span::after {
 .nws-sec .nws-card.card-2 .card-title {
   max-width: 538px;
 }
+.nws-sec .nws-card .card-ditl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+.nws-card .card-cnt .card-ditl .prsn span,
+.nws-card .card-cnt .card-ditl .dte span {
+  font-family: var(--font-Outfit);
+  font-size: 16px;
+  line-height: calc(30 / 16);
+}
 .nws-sec .nws-card .card-btn {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 85px;
+  top: 50px;
   z-index: 1;
+}
+.nws-sec .nws-card .card-btn svg {
+  transition: 0.3s linear;
+}
+.nws-sec .nws-card .card-btn:hover svg {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 50%;
+}
+.nws-row > div {
+  display: flex;
+}
+.nws-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.card-cnt {
+  flex: 1;
+}
+.card-btn {
+  margin-top: auto;
+}
+/*======== Img-scroll ========*/
+.scroll-sec {
+  min-height: 60vh;
+  width: 100%;
+  background: yellow;
 }
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {
@@ -1292,6 +1375,16 @@ h2 > span::after {
     color: var(--text-color);
     line-height: calc(80 / 100);
   }
+  .abt-sec .abt-btm-card.card-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    right: -10%;
+    background: rgba(255, 255, 255, 30%);
+    display: none;
+  }
   /*--------- Program ---------*/
   .prgrm-sec {
     padding: 70px 0 30px;
@@ -1324,6 +1417,13 @@ h2 > span::after {
     background-repeat: no-repeat;
     width: 140px;
     height: 13px;
+  }
+  .nws-sec .nws-card {
+    padding: 10px 15px;
+  }
+  .nws-sec .nws-card .card-title {
+    font-size: 28px;
+    margin: 0 auto 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1391,6 +1491,15 @@ h2 > span::after {
     width: 130px;
     height: 13px;
   }
+  .nws-card {
+    padding-bottom: 0 !important;
+  }
+  .nws-sec .nws-card .card-title {
+    font-size: 20px;
+  }
+  .nws-sec .nws-card .card-btn {
+    top: 30px;
+  }
 }
 @media screen and(max-width:600px) {
   /*--------- Program ---------*/
@@ -1452,6 +1561,23 @@ h2 > span::after {
     margin-bottom: 10px;
     font-size: 80px;
   }
+  .abt-sec .abt-btm-card.card-1::after,
+  .abt-sec .abt-btm-card.card-2::after,
+  .abt-sec .abt-btm-card.card-3::after {
+    display: none;
+  }
+  .abt-sec .abt-btm-card.card-1::before,
+  .abt-sec .abt-btm-card.card-2::before,
+  .abt-sec .abt-btm-card.card-3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(255, 255, 255, 30%);
+  }
   /*--------- Event ---------*/
   .evnt-sec .evnt-list .evnt .evnt-detail {
     flex-direction: column;
@@ -1494,6 +1620,9 @@ h2 > span::after {
     background-repeat: no-repeat;
     width: 130px;
     height: 13px;
+  }
+  .nws-sec .nws-row {
+    gap: 40px;
   }
 }
 @media screen and (max-width: 405px) {
