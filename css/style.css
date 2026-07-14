@@ -366,6 +366,7 @@ h2 > span::after {
 .regstr-btn:hover {
   opacity: 100%;
   transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .srch-btn {
   transition: 0.3s linear;
@@ -400,6 +401,9 @@ h2 > span::after {
 }
 .aply-btn:hover::after {
   transform: scale(80);
+}
+.aply-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .regstr-btn:focus,
 .srch-btn:focus {
@@ -834,6 +838,7 @@ h2 > span::after {
   background: var(--abt-sec-color);
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: 0.3s linear;
 }
 .prgrm-sec .crse-card .card-img {
   max-width: 100%;
@@ -920,6 +925,10 @@ h2 > span::after {
 }
 .crse-card .apply-btn:hover::after {
   transform: scale(80);
+}
+.prgrm-sec .crse-card:hover {
+  transform: scale(0.95);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .prgrm-sec .prgrm-btn {
   display: flex;
@@ -1071,13 +1080,27 @@ h2 > span::after {
   text-align: center;
 }
 .testi-cnt .video .video-btn {
+  transition: 0.3s linear;
   margin-bottom: 25px;
+  border-radius: 50%;
+}
+.testi-cnt .video .video-btn:hover {
+  background: var(--star-color);
+  box-shadow:
+    rgba(0, 0, 0, 0.75) 0px 14px 28px,
+    rgba(0, 0, 0, 0.82) 0px 10px 10px;
 }
 .testi-sec .testi-cnt .video span {
   font-size: 34px;
   font-family: var(--font-Outfit);
   font-weight: 500;
   color: var(--text-color);
+  transition: 0.3s linear;
+}
+.testi-sec .testi-cnt .video span:hover {
+  text-shadow:
+    rgb(182, 0, 0) 0px 14px 28px,
+    rgba(176, 29, 29, 0.979) 0px 10px 10px;
 }
 .testi-cnt .testi-card {
   padding: 65px 55px 27px;
