@@ -725,6 +725,12 @@ h2 > span::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s linear;
+}
+.abt-cnt .abt-trust .icon:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .abt-cnt .abt-trust .cnt .title {
   font-size: 18px;
@@ -1099,7 +1105,7 @@ h2 > span::after {
   top: -13px;
   transform: translate(-50%, -50%);
   content: "Play";
-  color: rgb(15, 211, 255);
+  color: var(--abt-text-color);
   transition-duration: 0.3s;
   font-size: 20px;
   font-family: var(--font-Crimson-Pro);
@@ -1108,7 +1114,7 @@ h2 > span::after {
 .testi-cnt .video-btn:hover:before {
   font-size: 27px;
   opacity: 1;
-  transform: translate(35px,51px);
+  transform: translate(35px, 51px);
   transition-duration: 0.3s;
 }
 .testi-cnt .video-btn:hover {
