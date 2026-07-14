@@ -1080,15 +1080,42 @@ h2 > span::after {
   text-align: center;
 }
 .testi-cnt .video .video-btn {
+  width: 114px;
+  height: 114px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
   transition: 0.3s linear;
   margin-bottom: 25px;
   border-radius: 50%;
+  overflow: hidden;
+  position: relative;
 }
-.testi-cnt .video .video-btn:hover {
-  background: var(--star-color);
-  box-shadow:
-    rgba(0, 0, 0, 0.75) 0px 14px 28px,
-    rgba(0, 0, 0, 0.82) 0px 10px 10px;
+.testi-cnt .video-btn svg {
+  transition: 0.3s linear;
+}
+.testi-cnt .video-btn::before {
+  position: absolute;
+  top: -13px;
+  transform: translate(-50%, -50%);
+  content: "Play";
+  color: rgb(15, 211, 255);
+  transition-duration: 0.3s;
+  font-size: 20px;
+  font-family: var(--font-Crimson-Pro);
+  font-weight: 600;
+}
+.testi-cnt .video-btn:hover:before {
+  font-size: 27px;
+  opacity: 1;
+  transform: translate(35px,51px);
+  transition-duration: 0.3s;
+}
+.testi-cnt .video-btn:hover {
+  background: var(--text-color);
+}
+.testi-cnt .video-btn:hover svg {
+  opacity: 0;
 }
 .testi-sec .testi-cnt .video span {
   font-size: 34px;
@@ -1097,11 +1124,11 @@ h2 > span::after {
   color: var(--text-color);
   transition: 0.3s linear;
 }
-.testi-sec .testi-cnt .video span:hover {
+/* .testi-sec .testi-cnt .video span:hover {
   text-shadow:
     rgb(182, 0, 0) 0px 14px 28px,
     rgba(176, 29, 29, 0.979) 0px 10px 10px;
-}
+} */
 .testi-cnt .testi-card {
   padding: 65px 55px 27px;
   background: #e6e7ee;
