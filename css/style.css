@@ -1478,6 +1478,22 @@ h2 > span::after {
   font-size: 18px;
   font-family: var(--font-Urbanist);
   color: var(--abt-p-text-color);
+  position: relative;
+}
+.foot-cnt-2 ul li a::after,
+.foot-cnt-3 ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--abt-p-text-color);
+  bottom: -1px;
+  transition: 0.3s linear;
+}
+.foot-cnt-2 ul li a:hover:after,
+.foot-cnt-3 ul li a:hover:after {
+  width: 90%;
 }
 .foot-cnt-4 p {
   max-width: 290px;
@@ -1580,6 +1596,20 @@ h2 > span::after {
 .foot-sec .copy-right a {
   color: var(--abt-p-text-color);
   text-transform: capitalize;
+  position: relative;
+}
+.foot-sec .copy-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background: var(--primary-color);
+  transition: 0.3s linear;
+}
+.foot-sec .copy-right a:hover:after {
+  width: 100%;
 }
 .foot-sec .copy-right::after {
   position: absolute;
