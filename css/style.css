@@ -533,10 +533,14 @@ h2 > span::after {
   max-width: 592px;
   height: 750px;
 }
-.bnr-right-img img {
+.bnr-sec .bnr-right-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s linear;
+}
+.bnr-sec:hover .bnr-right-img img {
+  transform: scale(0.96) translateX(20px);
 }
 /*================== Stdy section ====================*/
 .stdy-sec {
