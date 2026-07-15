@@ -61,6 +61,7 @@ a {
 }
 ul {
   list-style-type: none;
+  padding: 0;
 }
 span {
   display: inline-block;
@@ -1407,6 +1408,187 @@ h2 > span::after {
   letter-spacing: 0.4px;
   text-transform: uppercase;
   color: var(--text-color);
+}
+/*========== Footer ==========*/
+.foot-sec {
+  padding: 62px 0;
+}
+.foot-sec .foot-row {
+  margin-bottom: 35px;
+}
+.foot-cnt-1 {
+  max-width: 343px;
+}
+.foot-cnt-1 .foot-logo {
+  max-width: 120px;
+  margin-bottom: 20px;
+}
+.foot-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foot-cnt-1 > p {
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+  margin-bottom: 20px;
+}
+.foot-cnt-1 ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.foot-cnt-1 ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+}
+.foot-cnt-1 ul li a span {
+  max-width: 304px;
+  position: relative;
+}
+.foot-cnt-1 ul li:last-child a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 1px;
+  background: var(--abt-p-text-color);
+}
+.foot-menu .ft-title {
+  font-size: 23px;
+  font-family: var(--font-Outfit);
+  font-weight: 500;
+  margin-bottom: 23px;
+}
+.foot-cnt-2 ul,
+.foot-cnt-3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.foot-cnt-2 ul li a,
+.foot-cnt-3 ul li a {
+  font-size: 18px;
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+}
+.foot-cnt-4 p {
+  max-width: 290px;
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+  margin-bottom: 20px;
+}
+.foot-cnt-4 {
+  width: 100%;
+}
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #525252;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.subscribe-form input[type="email"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  min-width: 0;
+  background: transparent;
+  padding: 6px 24px;
+}
+.subscribe-form input[type="email"]::placeholder {
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+}
+.subscribe-form input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input[type="submit"]:hover {
+  background: var(--abt-text-color);
+  box-shadow: rgba(0, 0, 0, 0.84) 0px 3px 8px;
+}
+.foot-cnt-4 ul {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.foot-cnt-4 ul li a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--abt-p-text-color);
+  transition: 0.3s linear;
+}
+.foot-cnt-4 ul li a svg path {
+  transition: 0.3s linear;
+}
+.foot-cnt-4 ul li a:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.foot-cnt-4 ul li:first-child a:hover svg path {
+  fill: #1877f2;
+}
+.foot-cnt-4 ul li:nth-child(2) a:hover svg path {
+  fill: #e4405f;
+}
+.foot-cnt-4 ul li:nth-child(3) a:hover svg path {
+  fill: #e60023;
+}
+.foot-cnt-4 ul li:last-child a:hover svg path {
+  fill: #24a1de;
+}
+.foot-sec .copy-right {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 17px;
+  font-family: var(--font-Urbanist);
+  color: var(--abt-p-text-color);
+  position: relative;
+}
+.foot-sec .copy-right a {
+  color: var(--abt-p-text-color);
+  text-transform: capitalize;
+}
+.foot-sec .copy-right::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #000;
+  top: -12px;
 }
 /*=========== Media ===========*/
 @media screen and (max-width: 1200px) {

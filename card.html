@@ -79,9 +79,77 @@
         transform: translateX(-50%);
         border-radius: 40px 40px 0 0;
     }
+
+    .subscribe-form {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        max-width: 600px;
+        width: 100%;
+
+        padding: 6px;
+
+        border: 1px solid #5d5d5d;
+        border-radius: 14px;
+        background: #fff;
+    }
+
+    .subscribe-form input[type="email"] {
+        flex: 1;
+        border: none;
+        outline: none;
+
+        padding: 15px 25px;
+
+        font-size: 18px;
+        color: #333;
+        background: transparent;
+    }
+
+    .subscribe-form input[type="email"]::placeholder {
+        color: #8a8a8a;
+    }
+
+    .subscribe-form input[type="submit"] {
+        border: none;
+        outline: none;
+
+        padding: 15px 35px;
+
+        background: #dd321b;
+        color: #fff;
+
+        font-size: 18px;
+        border-radius: 10px;
+
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .subscribe-form input[type="submit"]:hover {
+        background: #c52c18;
+    }
+
+    .subscribe-form {
+        display: flex;
+    }
+
+    .subscribe-form input[type="email"] {
+        flex: 1;
+    }
+
+    .subscribe-form input[type="submit"] {
+        flex-shrink: 0;
+    }
 </style>
 
 <body>
+    <form class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+
+        <input type="submit" value="Subscribe">
+    </form>
     <div class="card" style="background-color: red; overflow: hidden; width: 490px;">
 
         <!-- Content Section -->
