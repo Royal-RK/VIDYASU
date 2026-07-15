@@ -24,7 +24,7 @@
 }
 html,
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* border: 3px solid white; */
 }
 header {
@@ -537,10 +537,6 @@ h2 > span::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.3s linear;
-}
-.bnr-sec:hover .bnr-right-img img {
-  transform: scale(0.96) translateX(20px);
 }
 /*================== Stdy section ====================*/
 .stdy-sec {
@@ -1892,6 +1888,14 @@ h2 > span::after {
   .nws-sec .nws-card .card-btn {
     top: 30px;
   }
+  /*--------- Research ---------*/
+  .resrch-sec {
+    padding: 40px 0;
+  }
+  /*--------- Footer ---------*/
+  .foot-sec {
+    padding: 40px 0;
+  }
 }
 @media screen and(max-width:600px) {
   /*--------- Program ---------*/
@@ -2026,8 +2030,12 @@ h2 > span::after {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 405px) {
-  .tp-hedr-cnt ul li:last-child::before {
+@media screen and (max-width: 406px) {
+  .tp-hedr-cnt ul {
+    display: none;
+  }
+  .tp-hedr-cnt ul li:last-child::before,
+  .tp-hedr-cnt ul li:not(:last-child, :nth-child(3))::after {
     display: none !important;
   }
   .bnr-sec {
@@ -2083,5 +2091,9 @@ h2 > span::after {
     right: 10px;
     font-size: 140px;
     color: rgb(197, 194, 194);
+  }
+  /*-------- Footer --------*/
+  .foot-sec .copy-right {
+    font-size: 14px;
   }
 }

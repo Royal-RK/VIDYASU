@@ -1,7 +1,7 @@
 const menuBtn = document.querySelector(".navbar-toggler");
 const navMenu = document.querySelector(".offcanvas");
 
-let open = true;
+let open = false;
 
 menuBtn.addEventListener("click", () => {
   if (open == true) {
