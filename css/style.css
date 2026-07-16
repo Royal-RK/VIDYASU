@@ -876,7 +876,7 @@ h2 > span::after {
   font-family: var(--font-Urbanist);
   line-height: calc(27 / 17);
   color: var(--abt-p-text-color);
-  flex-grow: 1;
+  flex: 1;
 }
 .crse-card .stud {
   font-size: 17px;
@@ -1131,11 +1131,6 @@ h2 > span::after {
   color: var(--text-color);
   transition: 0.3s linear;
 }
-/* .testi-sec .testi-cnt .video span:hover {
-  text-shadow:
-    rgb(182, 0, 0) 0px 14px 28px,
-    rgba(176, 29, 29, 0.979) 0px 10px 10px;
-} */
 .testi-cnt .testi-card {
   padding: 65px 55px 27px;
   background: #e6e7ee;
@@ -1353,10 +1348,10 @@ h2 > span::after {
   height: 100%;
   width: 100%;
 }
-.card-cnt {
+.nws-card .card-cnt {
   flex: 1;
 }
-.card-btn {
+.nws-card .card-btn {
   margin-top: auto;
 }
 /*======== Img-scroll ========*/
