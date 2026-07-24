@@ -16,6 +16,7 @@
   --abt-card-bg: #1fad96;
   --abt-text-color: #ab0c2f;
   --abt-p-text-color: #898989;
+  --footer-sec-bg: #f3f4f8;
   --font-Urbanist: "Urbanist", sans-serif;
   --font-PlayfairDisplay: "Playfair Display", serif;
   --font-Outfit: "Outfit", sans-serif;
@@ -370,11 +371,15 @@ h2 > span::after {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .srch-btn {
+  border: none;
+  outline: none;
+}
+.srch-btn svg {
   transition: 0.3s linear;
   outline: none;
   border: none;
 }
-.srch-btn:hover {
+.srch-btn:hover svg {
   transform: scale(1.1);
 }
 .aply-btn {
@@ -1403,6 +1408,7 @@ h2 > span::after {
 }
 /*========== Footer ==========*/
 .foot-sec {
+  background: var(--footer-sec-bg);
   padding: 62px 0;
 }
 .foot-sec .foot-row {
